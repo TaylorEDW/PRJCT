@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    char palavra[100];
+    int i, j, tam, simetrica = 1;
+
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    for (tam = 0; palavra[tam] != '\0'; tam++);   
+    for (i = 0, j = tam - 1; i <= j; i++, j--) {
+    if (palavra[i] != palavra[j]) {
+    simetrica = 0;
+    break;
+    }
+    }
+
+    
+    if (simetrica) {
+    printf("A palavra %s é simétrica.\n", palavra);
+    } else {
+    printf("A palavra %s não é simétrica.\n", palavra);
+    }
+
+    return 0;
+}
